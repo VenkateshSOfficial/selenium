@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2"  thread-count="5" name="chrome browser execution">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="seleniumTestCases.ServicenowPageValidation">
+                <methods>
+                    <parameter name="titleValidation" value="ServiceNow"/>
+                    <include name="validateServicenowPage"/>
+                </methods>
+            </class>
+            <class name="seleniumTestCases.ServicenowRegistrationValidation"/>
+            <class name="seleniumTestCases.ServicenowPageLoginValidation">
+                <methods>
+                    <include name="loginServicenowValidation"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
